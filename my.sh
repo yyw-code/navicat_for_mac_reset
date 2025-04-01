@@ -18,6 +18,9 @@ if [ -e "$navicat_path" ]; then
 
     # Step 3: Choose the appropriate preferences file based on version
     case $version in
+        "17")
+            preferences_file=~/Library/Preferences/com.navicat.NavicatPremium.plist
+            ;;
         "16")
             preferences_file=~/Library/Preferences/com.navicat.NavicatPremium.plist
             ;;
@@ -29,6 +32,7 @@ if [ -e "$navicat_path" ]; then
             exit 1
             ;;
     esac
+
 
     # Step 4: Reset trial time
     echo "Reseting trial time for Navicat Premium version $version..."
